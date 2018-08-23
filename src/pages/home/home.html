@@ -1,14 +1,13 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding id="back">
+    
+    <h1  *ngIf="notRunning">Zombie Pooper</h1>
+    <div id="buttons" *ngIf="notRunning">
+      <button ion-button (click)="init()" large>Play</button>
+      <button ion-button large>Settings</button>
+    </div>
+    <div #gameCanvas id="gameCanvas">
+    </div>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <p *ngIf="!notRunning" id="scoreid">Score: {{score}}</p>
+  
 </ion-content>
