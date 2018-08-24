@@ -30,7 +30,7 @@
     "@types/matter-js": "^0.10.1",
     "com.darktalker.cordova.screenshot": "^0.1.6",
     "cordova-admob-sdk": "^0.18.0",
-    "cordova-android": "^7.0.0",
+    "cordova-android": "7.0.0",
     "cordova-plugin-admob-free": "^0.18.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
