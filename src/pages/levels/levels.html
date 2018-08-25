@@ -1,0 +1,15 @@
+<!--
+  Generated template for the LevelsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding id="back">
+  <h1>Levels</h1>
+    <button *ngFor="let level of levels" ion-button icon-end id="levelid" (click)="play(level)" large>
+      Level {{level.id}}
+      <ion-icon name="lock" *ngIf="level.isLock"></ion-icon>
+      <ion-icon name="unlock" *ngIf="!level.isLock"></ion-icon>
+    </button>
+
+</ion-content>

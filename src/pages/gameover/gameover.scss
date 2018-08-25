@@ -1,9 +1,22 @@
 page-gameover {
     ion-content{
         #cent{
-            position: relative;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
             left: 0px;
             right: 0px;
+        }
+
+        #cent button{
+            background-color: #3f51b5;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
     }
 }

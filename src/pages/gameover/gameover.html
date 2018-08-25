@@ -6,10 +6,12 @@
 -->
 
 <ion-content padding>
-  <!-- <ion-img #image id="image" width="{{width}}" height="{{height}}" src="{{ screenshot }}" ></ion-img> -->
+  <img #imageover id="imageover" class="center" width="{{width}}" height="{{height}}" src="{{ screenshot }}" >
   
-  <div id="cent" #cent>
-    <h1>Score: {{score}}</h1>
-    <button ion-button (click)="exit()" large>Exit</button>
+  <div id="cent" #cent >
+    <h1>Score: {{score}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Max Score: {{0}}</h1>
+    <button ion-button (click)="tryAgain()" *ngIf="!gonext" medium>Try Again!</button>
+    <button ion-button (click)="nextLevel()" *ngIf="gonext" medium>Next Level</button>
+    <button ion-button (click)="exit()" medium>Exit</button>
   </div>
 </ion-content>

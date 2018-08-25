@@ -1,13 +1,16 @@
 <ion-content padding id="back">
     
-    <h1  *ngIf="notRunning">Zombie Pooper</h1>
+    <h1  *ngIf="notRunning">Poly Pooper</h1>
     <div id="buttons" *ngIf="notRunning">
       <button ion-button (click)="init()" large>Play</button>
+      <button ion-button (click)="levelspage()" large>Levels</button>
       <button ion-button large>Settings</button>
     </div>
     <div #gameCanvas id="gameCanvas">
     </div>
-
+    
+    <p *ngIf="!notRunning" id="levelid">Level: {{currentlevel+1}}</p>
     <p *ngIf="!notRunning" id="scoreid">Score: {{score}}</p>
+    <p *ngIf="!notRunning" id="targetscoreid">Target Score: {{levels[currentlevel].target_score}}</p>
   
 </ion-content>

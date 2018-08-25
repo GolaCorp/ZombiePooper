@@ -5,18 +5,31 @@ page-home {
         h1{
             position: relative;
             text-align: center;
-            font-size: 50px;
-            top: 20%;
+            font-size: 60px;
+            top: 10%;
             left: 0px;
             right: 0px;
-            color: darkblue;
+            font-weight: 1000;
+            color: white;
         }
 
         #buttons{
             position: relative;
-            top: 25%;
-            text-align: center;
+            top: 12%;
+            // text-align: center;
+            left: 0px;
+            right: 0px;
         }
+        #buttons button{
+            display: block;
+            margin:0 auto;
+            margin-top: 10px;
+            font-weight: bold;
+            background-color: #3f51b5;
+        }
+        // button{
+        //     display: inline-block;
+        // }
         #gameCanvas{
             position: fixed;
             top:0px;
@@ -27,15 +40,35 @@ page-home {
             color: white;
             position: fixed;
             right: 30px;
-            top: 10px;
+            top: -10px;
+            font-size: 20px;
+        }
+
+        #targetscoreid{
+            color: white;
+            position: fixed;
+            left: 0px;
+            top: -10px;
+            font-size: 20px;
+        }
+
+        #levelid{
+            color: white;
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: -14px;
             font-size: 28px;
+            text-align: center;
         }
 
     }
 
 
-    // #back{
-        // background-color: #111111;
-    // }
+
+
+    #back{
+        background-image: url('../../assets/imgs/background.jpg');
+    }
 
 }

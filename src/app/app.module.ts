@@ -4,34 +4,37 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { Screenshot } from '@ionic-native/screenshot';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GameoverPage } from '../pages/gameover/gameover'
 import { AdMobFree} from '@ionic-native/admob-free';
+import { LevelsPage } from '../pages/levels/levels'
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    GameoverPage
+    LevelsPage,
+    GameoverPage,
   ],
   imports: [
     BrowserModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    GameoverPage
+    LevelsPage,
+    GameoverPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ScreenOrientation,
-    Screenshot,
     AdMobFree,
+    ScreenOrientation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

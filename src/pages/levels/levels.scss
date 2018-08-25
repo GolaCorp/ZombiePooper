@@ -1,0 +1,25 @@
+page-levels {
+    ion-content{
+        h1{
+            position: relative;
+            text-align: center;
+            font-size: 30px;
+            top: 5%;
+            left: 0px;
+            right: 0px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        #levelid{
+            background: none;
+            border: 1px solid white;
+            margin: 8px;
+        }
+    }
+
+
+    #back{
+        background-image: url('../../assets/imgs/background.jpg');
+    }
+}
