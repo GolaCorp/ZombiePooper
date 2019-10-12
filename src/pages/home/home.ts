@@ -71,7 +71,7 @@ export class HomePage {
               fire_force: i < 3 ? 1 : (i < 6 ? 2 : 2),
               ghost_speed: 1.5 + i*0.4*Math.random(),
               fire_speed: 2 + i*0.1,
-              shooter_level: i < 3 ? 3 : (i < 6 ? 4 : 6),
+              shooter_level: i < 3 ? 3 : (i < 5 ? 4 : (i < 8 ? 5 : 6)),
               target_score:1000 + i*250
             });
           }
@@ -138,8 +138,9 @@ export class HomePage {
                 y = this.height + Math.random()*100;
                 x = Math.random()*this.width;
             }
-            this.ghosts.push(this.Bodies.circle(x,y,7, { 
+            this.ghosts.push(this.Bodies.polygon(x,y,Math.floor(Math.random()*this.currentlevel*4) + 3 , 4*Math.random() + 9 - this.currentlevel*0.4 , { 
                 frictionAir: 0.0, 
+                label:'ghost',
                 collisionFilter:{
                     category:this.collisions
                 },
@@ -174,7 +175,9 @@ export class HomePage {
         if(this.score >= this.levels[this.currentlevel].target_score){
             this.storage.set('currentlevel', this.currentlevel+1);
 
-
+            this.Render.stop(this.render);
+            this.Runner.stop(this.runner);     
+            this.runner.enabled = false;
             let currentIndex = this.navCtrl.getActive().index;
             this.navCtrl.push(GameoverPage,{image:this.render.canvas.toDataURL("image/jpeg")
                 ,score:this.score,width:this.width,height:this.height, next:true}).then(()=>{

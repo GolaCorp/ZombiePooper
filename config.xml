@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.github.golacorp.zombiepooper" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Zombie Pooper</name>
-    <description>An game app.</description>
+    <name>Poly Pooper</name>
+    <description>A game with polygon</description>
     <author email="vikasgola2015@gmail.com" href="http://golacorp.github.io/">GolaCorp</author>
     <content src="index.html" />
     <access origin="*" />
